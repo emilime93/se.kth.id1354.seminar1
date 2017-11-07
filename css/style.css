@@ -1,0 +1,517 @@
+/************************************
+                GENERAL
+*************************************/
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+#wrapper {
+    min-height: 100%;
+    margin-bottom: -30px;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: 'Pacifico', cursive;
+    font-weight: lighter;
+    color: #AEB6BF;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.75;
+}
+
+ol,
+ul {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.75;
+}
+
+
+
+/************************************
+                HEADER
+*************************************/
+
+header {
+    padding: 15px;
+    min-height: 100px;
+}
+
+header h1 {
+    font-size: 3em;
+    font-family: 'Pacifico', cursive;
+    font-weight: lighter;
+    display: inline-block;
+    margin: 0;
+}
+
+.header-content {
+    padding: 15px 0 5px;
+}
+
+#logo {
+    margin-left: 15px;
+    text-align: left;
+    font-size: 0.6em;
+}
+
+
+/************************************
+            NAVIGATION
+*************************************/
+
+
+nav {
+    height: 40px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav a,
+nav a:visited {
+    display: block;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    float: left;
+    width: calc(100%/3);
+    height: 40px;
+    line-height: 40px;
+}
+
+nav ul ul li {
+    position: relative;
+    width: 100%;
+    display: none;
+}
+
+nav ul li:hover ul li {
+    display: block;
+}
+
+/************************************
+                MAIN
+*************************************/
+
+main {
+    padding: 3%;
+}
+
+/************************************
+                FOOTER
+*************************************/
+.pusher,
+footer {
+    height: 30px;
+}
+
+footer p {
+    text-align: center;
+    font-family: 'Open Sans', monospace;
+    margin: auto auto;
+}
+
+
+/************************************************************************
+                                    HOME
+*************************************************************************/
+
+.home-article:first-of-type {
+    margin-top: 0px;
+}
+
+.home-article {
+    border-bottom: 3px solid grey;
+    margin-top: 25px;
+}
+
+.home-article:last-of-type {
+    border: none;
+}
+
+.float-right {
+    float: right;
+}
+
+.home-article img {
+    width: 50%;
+    margin: 0 25%;
+}
+
+/***********************************************************************
+                            CALENDAR
+***********************************************************************/
+
+
+.label {
+    text-align: center;
+    display: block;
+    float: left;
+    overflow: hidden;
+    background: white;
+    border-radius: 100%;
+    width: calc(100%/7);
+    margin-right: -4px;
+}
+
+.fotd-meatballs {
+    background: url('../img/meatballs.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.day {
+    display: block;
+    float: left;
+    width: calc(100%/7);
+    height: 10vh;
+    overflow: hidden;
+    border: 1px solid black;
+    padding: 5px;
+    margin-right: -4px;
+    background-size: contain;
+}
+
+.calendar .calendar-img {
+    width: 100%;
+    border-radius: 0;
+}
+
+/***********************************************************************
+                            RECIPE PAGES
+***********************************************************************/
+
+.ingredients ul {
+    background: rgb(251, 246, 220);
+    border-radius: 15px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.ingredients ul li {
+    padding-left: 15px;
+    border-bottom: 1px solid rgb(189, 189, 189);
+}
+
+.ingredients ul li:last-of-type {
+    border-bottom: none;
+}
+
+/*
+    Comments
+*/
+
+.comments {
+
+    border-top: 3px solid rgb(189, 189, 189);
+}
+
+.comment {
+    border-bottom: 1px solid rgb(189, 189, 189);
+}
+
+.comment:last-of-type {
+    border: none;
+}
+
+.profile-pic {
+    width: 10%;
+    border-radius: 100%;
+    float: left;
+    margin-right: 15px;
+}
+
+.user-name {
+    float: left;
+    font-weight: bold;
+    line-height: 32px;
+}
+/*******************************
+        CLEARFIX
+********************************/
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*******************************
+        MEDIA QUERIES
+********************************/
+
+/*************
+    TABLET
+*************/
+@media screen and (min-width: 768px) {
+
+    /***
+        Header
+    ***/
+
+    header h1 {
+        margin-left: 10%;
+    }
+
+    /***
+        Navigation
+    ***/
+
+    nav {
+        height: 60px;
+    }
+
+    nav ul {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    nav ul li {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    nav ul ul {
+        width: 100%;
+    }
+
+    /*
+        General
+    */
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    ol,
+    ul {
+        font-size: 1em;
+    }
+
+    /***
+        Home
+    ***/
+
+    main {
+        padding: 15px 0 0;
+        width: 80%;
+        margin-left: 10%;
+        max-width: 900px;
+    }
+
+    main:last-of-type {
+        margin-bottom: 50px;
+    }
+
+    /***
+        Recipe
+    ***/
+
+
+}
+
+/*************
+    DESKTOP
+*************/
+
+@media screen and (min-width: 1024px) {
+
+    /***
+        Header
+    ***/
+
+    header h1 {
+        margin-left: 15%;
+        font-size: 4.5em;
+    }
+
+    /***
+        Navigation
+    ***/
+
+    nav ul {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    nav ul li {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    #logo {
+        padding: 15px 0;
+    }
+
+    /***
+        Home
+    ***/
+
+    main {
+        width: 70%;
+        margin-left: 15%;
+        max-width: 1080px;
+    }
+
+    main h1 {
+        font-size: 3em;
+    }
+
+    main h2 {
+        font-size: 2em;
+    }
+
+    main p {
+        font-size: 1em;
+    }
+
+    main ol,
+    main ul {
+        font-size: 1em;
+    }
+
+    main:last-of-type {
+        margin-bottom: 50px;
+    }
+
+    /***
+        Recipe
+    ***/
+
+    .recipe-img {
+        padding: 5px;
+        display: inline-block;
+        float: right;
+        width: 50%;
+        margin: 50px -4px 0 0;
+    }
+
+    .ingredients {
+        padding: 5px;
+        display: inline-block;
+        width: 49%;
+    }
+
+    .instructions {
+
+    }
+
+
+}
+
+/************************************
+                COLORS
+*************************************/
+
+header {
+    background: #d83e3e;
+    background: /*linear-gradient(to bottom, rgba(254, 164, 162, 0), rgba(254, 164, 162, 1)), */url('../img/nice-looking-food.jpg');
+    /* TODO: Make a color gradient from the bottom up
+    to transition into the menu. */
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    background-color: #99c26e;
+}
+
+header h1 {
+    color: #e25656;
+    text-shadow: 2px 2px 2px #fff, -2px -2px 2px #fff;
+}
+
+h2 {
+    color: #e25656;
+}
+
+footer {
+    color: #344E41;
+    background: #99c26e;
+}
+
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #e25656;
+}
+
+.home-article a:hover {
+    color: #F8C471;
+    text-decoration: underline;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+    color: #344E41;
+}
+
+nav a:hover {
+    background: #69953a;
+    color: white;
+}
+
+nav ul li {
+    background: #99c26e;
+}
+
+nav #active {
+    font-weight: bold;
+    border-bottom: 3px solid #e25656;
+}
+
+.desktop-navigation {
+    background: #e25656;
+}

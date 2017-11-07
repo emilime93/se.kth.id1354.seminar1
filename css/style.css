@@ -197,6 +197,16 @@ footer p {
     overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
+    background-clip: content-box;
+    color: white;
+}
+
+.fotd-pancakes {
+    background: url('../img/pancakes.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: content-box;
     color: white;
 }
 

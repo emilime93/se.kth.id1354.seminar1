@@ -218,7 +218,6 @@ footer p {
     overflow: hidden;
     border: 1px solid black;
     padding: 5px;
-    margin-right: -4px;
     background-size: contain;
 }
 
@@ -493,7 +492,6 @@ footer {
     color: #344E41;
     background: #99c26e;
 }
-
 
 a,
 a:link,

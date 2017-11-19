@@ -7,7 +7,7 @@
      ?>
 
     <body>
-        <div class="wrapper">
+        <div id="wrapper">
 
             <?php
                 include 'fragments/header.php';
@@ -40,10 +40,11 @@
                           <input id="submit-login" type="submit" value="Register">
 
                       </form>
+                      <p>The fields marked with <span class="required">*</span> are required.</p>
                   </div>
               </main>
 
-
+              <div class="pusher"></div>
         </div>
 
         <?php

@@ -39,7 +39,8 @@
                           <input id="submit-login" type="submit" value="Log In">
 
                       </form>
-                      <p>Not a user already? Create a account <a href="register.php">here</a></p>
+                      <p>The fields marked with <span class="required">*</span> are required.</p>
+                      <p>Not a user already? Create a account <a href="register.php">here</a>.</p>
                   </div>
               </main>
 

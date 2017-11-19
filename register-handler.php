@@ -33,19 +33,19 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
-       // TODO USER ALREADY EXISTS. TELL USER TO CHOOSE DIFFERENT USERNAME
        $_SESSION['invalid-user'] = 1;
        $conn->close();
        header("Location: register.php");
        exit();
    } else {
-       // INSERT INTO `user`(`username`, `password`) VALUES ([value-1],[value-2])
+       //The user exists
        $uname = $_POST['username'];
        $pw = $_POST['password'];
        $sql = "INSERT INTO $table (`username`, `password`) VALUES ('$uname', '$pw')";
        $conn->query($sql);
        $conn->close();
-       header("Location: index.php");
+       $_SESSION['registration-complete'] = 1;
+       header("Location: login.php");
        exit();
    }
     $conn->close();

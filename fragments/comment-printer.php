@@ -34,7 +34,7 @@
             $id = $row['id'];
             echo '<form action="delete-comment.php" method="post">';
             echo "<input type=\"hidden\" name=\"comment-id\" value=\"$id\">";
-            echo '<input type="submit" value="Delete">';
+            echo '<input class="delete-comment" type="submit" value="Delete">';
             echo "</form>";
         }
         echo "</div>";

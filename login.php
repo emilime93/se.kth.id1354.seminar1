@@ -23,7 +23,12 @@
                           echo '<p class="required">Please fill every field with a *</p>';
                       }
                       if ($_SESSION['incorrect-login']) {
+                          unset($_SESSION['incorrect-login']);
                           echo '<p class="required">Incorrect username and/or password. Try again!<p>';
+                      }
+                      if (isset($_SESSION['registration-complete'])) {
+                          unset($_SESSION['registration-complete']);
+                          echo '<p class="registration-complete">Registration complete!</p>';
                       }
                       ?>
                       <h2>Log In</h2>

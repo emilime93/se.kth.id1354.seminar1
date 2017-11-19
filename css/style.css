@@ -8,13 +8,24 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
+input {
+    box-shadow: 0;
+    border: 1px solid grey;
+    border-radius: 0;
+}
+
+html, body {
+    height: 100%;
 }
 
 #wrapper {
     min-height: 100%;
     margin-bottom: -30px;
+}
+
+#wrapper::after {
+    content: "";
+    display: block;
 }
 
 img {
@@ -60,7 +71,6 @@ ul {
 *************************************/
 
 header {
-    padding: 15px;
     min-height: 100px;
 }
 
@@ -68,18 +78,37 @@ header h1 {
     font-size: 3em;
     font-family: 'Pacifico', cursive;
     font-weight: lighter;
-    display: inline-block;
+    display: block;
     margin: 0;
 }
 
 .header-content {
-    padding: 15px 0 5px;
+    padding: 2%;
 }
 
 #logo {
-    margin-left: 15px;
     text-align: left;
+    display: inline-block;
     font-size: 0.6em;
+}
+
+/*
+    USER AREA
+*/
+
+.user-area {
+    color: white;
+    display: block;
+    text-align: right;
+}
+
+.user-area p {
+    margin: 0;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+#login-button {
 }
 
 
@@ -138,7 +167,8 @@ main {
 /************************************
                 FOOTER
 *************************************/
-.pusher,
+/*.pusher,*/
+#wrapper::after,
 footer {
     height: 30px;
 }
@@ -146,7 +176,6 @@ footer {
 footer p {
     text-align: center;
     font-family: 'Open Sans', monospace;
-    margin: auto auto;
 }
 
 
@@ -173,7 +202,40 @@ footer p {
 
 .home-article img {
     width: 50%;
-    margin: 0 25%;
+    display: block;
+    margin: 0 auto;
+}
+
+/***********************************************************************
+                            LOGIN/REGISTER
+***********************************************************************/
+
+.login-area {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.login-form {
+    font-family: 'Open Sans', sans-serif;
+    /*display: block;*/
+}
+
+.login-form input,
+.login-form label {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.login-form input {
+    padding: 6px;
+}
+
+.login-form #submit-login {
+    margin-top: 20px;
+    border: 0;
 }
 
 /***********************************************************************
@@ -189,7 +251,6 @@ footer p {
     background: white;
     border-radius: 100%;
     width: calc(100%/7);
-    margin-right: -4px;
 }
 
 .fotd-meatballs {
@@ -304,9 +365,12 @@ footer p {
         Header
     ***/
 
-    header h1 {
-        margin-left: 10%;
+    .header-content {
+        padding: 2% 0;
+        margin: 0 auto;
     }
+
+    /*TODO LOGIN HERE*/
 
     /***
         Navigation
@@ -318,6 +382,7 @@ footer p {
 
     nav ul {
         width: 80%;
+        max-width: 900px;
         margin: 0 auto;
     }
 
@@ -358,7 +423,7 @@ footer p {
     main {
         padding: 15px 0 0;
         width: 80%;
-        margin-left: 10%;
+        margin: 0 auto;
         max-width: 900px;
     }
 
@@ -383,10 +448,21 @@ footer p {
         Header
     ***/
 
+    .header-content {
+        width: 70%;
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
     header h1 {
-        margin-left: 15%;
         font-size: 4.5em;
     }
+
+    #login-button {
+        font-size: 1.25em;
+    }
+
+    /*TODO LOGIN HERE*/
 
     /***
         Navigation
@@ -394,6 +470,7 @@ footer p {
 
     nav ul {
         width: 70%;
+        max-width: 1080px;
         margin: 0 auto;
     }
 
@@ -412,7 +489,7 @@ footer p {
 
     main {
         width: 70%;
-        margin-left: 15%;
+        margin: 0 auto;
         max-width: 1080px;
     }
 
@@ -455,8 +532,12 @@ footer p {
         width: 49%;
     }
 
-    .instructions {
+    /*
+        Login
+    */
 
+    .login-area {
+        margin-top: 50px;
     }
 
 
@@ -468,9 +549,7 @@ footer p {
 
 header {
     background: #d83e3e;
-    background: /*linear-gradient(to bottom, rgba(254, 164, 162, 0), rgba(254, 164, 162, 1)), */url('../img/nice-looking-food.jpg');
-    /* TODO: Make a color gradient from the bottom up
-    to transition into the menu. */
+    background: url('../img/nice-looking-food.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -482,6 +561,19 @@ nav {
 header h1 {
     color: #e25656;
     text-shadow: 2px 2px 2px #fff, -2px -2px 2px #fff;
+}
+
+#login-button {
+    background: #e25656;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.login-form #submit-login {
+    color: white;
+    background: #99c26e;
+    border: 1px solid #344E41;
+    border-radius: 4px;
 }
 
 h2 {
@@ -527,4 +619,8 @@ nav #active {
 
 .desktop-navigation {
     background: #e25656;
+}
+
+.required {
+    color: red;
 }

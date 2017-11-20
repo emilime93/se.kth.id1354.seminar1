@@ -313,13 +313,14 @@ footer p {
 
 .comments {
     display: inline-block;
+    width: 100%;
     border-top: 3px solid rgb(189, 189, 189);
 }
 
 .comment {
     width: 100%;
     padding: 15px;
-    display: inline-block;
+    display: block;
     border-bottom: 1px solid rgb(189, 189, 189);
     margin-bottom: 10px;
 }

@@ -52,7 +52,7 @@
                     } ?>
 
                 <div class="comments">
-                    <h3>Comments</h3>
+                    <h3 id="comments">Comments</h3>
                     <?php
                         $_SESSION['recipe'] = basename($_SERVER['PHP_SELF'], "-recipe.php");
                         include 'fragments/comment-printer.php';

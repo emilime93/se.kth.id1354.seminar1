@@ -1,11 +1,8 @@
 <?php
     session_start();
-    $id = $_POST['comment-id'];
+    require 'keys.php';
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "tidabmajs";
-    $dbname = "tasty_recipes";
+    $id = $_POST['comment-id'];
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

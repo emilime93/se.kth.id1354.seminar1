@@ -175,6 +175,7 @@ footer {
 
 footer p {
     text-align: center;
+    margin: 0;
     font-family: 'Open Sans', monospace;
 }
 

@@ -1,6 +1,7 @@
 <?php
 
     session_start();
+    require 'keys.php';
 
     $login_username = $_POST['username'];
     $login_password = $_POST['password'];
@@ -10,11 +11,6 @@
         header("Location: register.php");
         exit();
     }
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "tidabmajs";
-    $dbname = "tasty_recipes";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

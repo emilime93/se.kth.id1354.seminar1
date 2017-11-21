@@ -1,13 +1,10 @@
 <?php
     session_start();
+    require 'keys.php';
+
     $user = $_SESSION['logged-in-user'];
     $recipe = $_POST['recipe'];
     $comment = $_POST['comment'];
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "tidabmajs";
-    $dbname = "tasty_recipes";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -23,6 +20,6 @@
     //closes the connection
     $conn->close();
 
-    header("Location: $recipe-recipe.php");
+    header("Location: $recipe-recipe.php#comments");
     exit();
 ?>

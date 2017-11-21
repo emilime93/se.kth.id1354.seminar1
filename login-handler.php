@@ -1,6 +1,7 @@
 <?php
 
     session_start();
+    require 'keys.php';
 
     /*if (isset($_SESSION['logged-in-user']) && $_POST['username'] == $_SESSION['logged-in-user']) {
         header("Location: calendar.php");
@@ -15,11 +16,6 @@
 
     $login_username = $_POST['username'];
     $login_password = $_POST['password'];
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "tidabmajs";
-    $dbname = "tasty_recipes";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

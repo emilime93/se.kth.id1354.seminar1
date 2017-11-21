@@ -1,12 +1,8 @@
 <?php
+    require './keys.php';
 
     $recipe = $_SESSION['recipe'];
     $user = $_SESSION['logged-in-user'];
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "tidabmajs";
-    $dbname = "tasty_recipes";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

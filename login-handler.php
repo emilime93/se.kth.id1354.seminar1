@@ -25,22 +25,23 @@
        die("Connection failed: " . $conn->connect_error);
     }
 
-    // Creates the
-    $table = "`user`";
-    $where_condition = "WHERE `username`='$login_username' AND `password`='$login_password'";
-
-    // Build query and get the reults.
-    $sql = "SELECT `username` FROM $table $where_condition";
+    $sql = "SELECT * FROM `user` WHERE `username`='$login_username'";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
        // output data of each row
        $row = $result->fetch_assoc();
-       $_SESSION['logged-in-user'] = $row['username'];
-       $conn->close();
-       $url = $_SESSION['current-page'];
-       header("Location: $url");
-       exit();
+       if (password_verify($login_password, $row['password'])) {
+           $_SESSION['logged-in-user'] = $row['username'];
+           $url = $_SESSION['current-page'];
+           $conn->close();
+           header("Location: $url");
+       } else {
+           $_SESSION['incorrect-login'] = 1;
+           $conn->close();
+           header("Location: login.php");
+       }
+        exit();
    } elseif($result->num_rows > 1) {
        echo 'Too many results. Error <br>';
    } else {

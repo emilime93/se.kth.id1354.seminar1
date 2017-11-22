@@ -36,7 +36,7 @@
    } else {
        //The user exists
        $uname = $_POST['username'];
-       $pw = $_POST['password'];
+       $pw = password_hash($_POST['password'], PASSWORD_DEFAULT);
        $sql = "INSERT INTO $table (`username`, `password`) VALUES ('$uname', '$pw')";
        $conn->query($sql);
        $conn->close();
